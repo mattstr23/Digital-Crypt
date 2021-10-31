@@ -1,25 +1,23 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
+import React, {useEffect} from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { dispatchInfo } from '../redux/actions/MarketActions';
 
 export default function Markets() {
+    const dispatch = useDispatch();
+    const markets = useSelector((state) => state.marketData)
 
     useEffect(() => {
-        fetchCoins();
+        const fetchCoins = async () => {
+            const getCoins = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false");
+            const coins = await getCoins.json();
+            dispatchInfo(dispatch, coins)
+        }
+        fetchCoins()
+        return () =>{}
     }, []);
 
-    const [coins, setCoins] = useState([])
-
-    const fetchCoins = async () => {
-        const getCoins = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false");
-        const coins = await getCoins.json();
-        console.log(coins)
-        setCoins(coins)
-    }
     return (
         <div>
-            {coins.map(coin => (
-                <h1>{coin.name}</h1>
-            ))}
             
         </div>
     )
