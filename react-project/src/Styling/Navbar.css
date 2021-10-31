@@ -1,0 +1,117 @@
+.navbar {
+	display: flex;
+	background-color: #0c2d48;
+	height: 80px;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 20;
+}
+.navbarCont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 80px;
+}
+.logoArea {
+	display: flex;
+	justify-content: start;
+	cursor: pointer;
+	align-items: center;
+	margin-left: 20px;
+}
+.siteName {
+	text-align: center;
+	font-family: "Orbitron", sans-serif;
+	color: transparent;
+	background: linear-gradient(90deg, #145da0, #2e8bc0, #b1d4e0, white);
+	background-size: 400%;
+	letter-spacing: 3px;
+	-webkit-background-clip: text;
+	animation: colorFlow 5s linear infinite;
+	-webkit-background-size: 400%;
+}
+.navItems {
+	display: flex;
+	width: 70vw;
+	list-style: none;
+	text-align: center;
+	margin-right: 10px;
+	justify-content: end;
+}
+.navLink {
+	font-family: "Exo", sans-serif;
+	text-decoration: none;
+	color: #b1d4e0;
+	padding: 0.5rem 1rem;
+	border-bottom: 4px solid transparent;
+}
+.navLinks {
+	line-height: 40px;
+	margin-right: 1rem;
+}
+.navLinks i {
+	padding-right: 0.4rem;
+}
+.navLinks:after {
+	content: "";
+	display: block;
+	height: 3px;
+	width: 0;
+	background: transparent;
+	transition: width 1s ease, background-color 0.5s ease;
+}
+.navLinks:hover:after {
+	width: 100%;
+	background: white;
+}
+.navLinks .active {
+	color: white;
+	border-bottom: 2px solid #145da0;
+}
+.menuButtons {
+	margin-right: 20px;
+	color: #b1d4e0;
+	font-size: 2.5rem;
+	display: none;
+	cursor: pointer;
+}
+@media screen and (max-width: 650px) {
+	.navbarCont {
+		justify-content: space-between;
+	}
+	.navItems {
+		display: flex;
+		flex-direction: column;
+		background: #0c2d48;
+		width: 100%;
+		position: absolute;
+		top: 80px;
+		left: -110%;
+		opacity: 1;
+		transition: all 0.5s ease;
+	}
+	.navItems.active {
+		background: #0c2d48;
+		left: 0px;
+		opacity: 1;
+		transition: all 0.5s ease;
+		z-index: 1;
+	}
+	.menuButtons {
+		display: block;
+	}
+}
+@keyframes colorFlow {
+	0% {
+		background-position: 0 100%;
+	}
+	50% {
+		background-position: 100% 0;
+	}
+	0% {
+		background-position: 0 100%;
+	}
+}
