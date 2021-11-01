@@ -3,6 +3,7 @@
 	flex-direction: column;
 	width: 100%;
 	animation: slowLoad 3s;
+	text-align: center;
 }
 .coinCont {
 	margin: 20px;
@@ -14,21 +15,26 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #b1d4e0;
+	background-image: url("../assets/crypPic.jpeg");
 	border-radius: 0 0 5px 5px;
 }
-.infoArea h1 {
+.welcome {
 	font-family: "Montserrat", sans-serif;
-	color: #145da0;
+	color: white;
 	margin: 10px;
 }
-.infoArea h4 {
+.greeting {
 	margin: 10px;
 	margin-bottom: 0;
 	padding-bottom: 5px;
 	font-family: "Montserrat", sans-serif;
-	color: #145da0;
-	text-align: center;
+	color: #b1d4e0;
+}
+.infoTitle {
+	color: white;
+	margin-top: 10px;
+	text-decoration: underline;
+	font-family: "Orbitron", sans-serif;
 }
 @keyframes slowLoad {
 	from {

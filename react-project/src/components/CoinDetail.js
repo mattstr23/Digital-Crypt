@@ -40,10 +40,11 @@ export default function CoinDetail() {
                     </div>
                     <div className="infoSet3">
                         <p className="supply">Circulating Supply: {info?.market_data?.circulating_supply}</p>
-
+                        <p className="maxSupply">Max Supply: {info?.market_data?.max_supply}</p>
                     </div>
                 </div>
             </div>
+            <button></button>
             <p className="descrip">{info?.description?.en}</p>
         </div>
     )

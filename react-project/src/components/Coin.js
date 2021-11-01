@@ -1,10 +1,13 @@
 import React from 'react'
 import "../Styling/Coin.css"
 import {Link} from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { addCrypt } from '../redux/actions/PortfolioActions';
 
 export default function Coin(props) {
     const priceChangePer = props.coin.price_change_percentage_24h;
     const priceChange = props.coin.price_change_24h;
+    const dispatch = useDispatch();
     return (
         <div className="coinTick">          
             <img className="coinLogo" src={props.coin.image} alt="Crypto"></img>
@@ -21,7 +24,7 @@ export default function Coin(props) {
             ) : (
                 <p className="coinPer green">{priceChangePer.toFixed(2)}%</p>
             )}
-            <button className="addBut">ADD</button>
+            <button className="addBut" onClick={() => addCrypt(dispatch, props.coin)}>ADD</button>
         </div>
     )
 }

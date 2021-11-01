@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import React,{useEffect} from 'react';
 import { useDispatch } from 'react-redux';
-import { dispatchMarketInfo, dispatchDetailedInfo } from './redux/actions/MarketActions';
+import { dispatchMarketInfo } from './redux/actions/MarketActions';
 import Markets from './components/Markets';
 import Landing from './components/Landing'; 
 import Nav from './components/Nav';
@@ -17,7 +17,7 @@ function App() {
         const getMarkets = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false");
         const jsonMarkets = await getMarkets.json();
         dispatchMarketInfo(dispatch, jsonMarkets)
-    }
+    };
 
   return (
     <Router>
