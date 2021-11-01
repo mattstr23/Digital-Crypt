@@ -41,6 +41,10 @@
 	font-size: 20px;
 	margin: 2px;
 }
+.cryptName a {
+	color: inherit;
+	text-decoration: inherit;
+}
 .cryptSymb {
 	color: white;
 	font-size: 16px;

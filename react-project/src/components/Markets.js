@@ -10,7 +10,7 @@ export default function Markets() {
         <div className="marketsPage">
             <div className="infoArea">
                 <h1 className="welcome">Welcome to Digital Crypt</h1>
-                <h4 className="greeting">Browse the markets below and click the name to see more info about that crypto!</h4>
+                <h4 className="greeting">Browse the markets below, click the name of the Crypto to see more on it</h4>
                 <h1 className="infoTitle">MARKETS</h1>
             </div>
             <div className="coinCont">

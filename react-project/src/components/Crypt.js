@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteCrypt } from '../redux/actions/PortfolioActions'
 import "../Styling/Crypt.css"
+import { Link } from 'react-router-dom'
 
 export default function Crypt(props) {
     console.log(props)
@@ -10,7 +11,7 @@ export default function Crypt(props) {
         <div className="cryptCont">
             <div className="mainCryptInfo">
                 <img className="portLogo" src={props.crypt.image} alt="Crypto"></img>
-                <h1 className="cryptName">{props.crypt.name}</h1>
+                <h1 className="cryptName"><Link to={`/markets/${props.crypt.id}`}>{props.crypt.name}</Link></h1>
                 <h2 className="cryptSymb">Sym: {props.crypt.symbol}</h2>
             </div>
             <div className="otherInfo">
