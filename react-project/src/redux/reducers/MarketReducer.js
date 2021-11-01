@@ -1,6 +1,6 @@
-import { GET_MRKT_INFO } from "../action-types/MarketTypes"
+import { GET_MRKT_INFO } from "../action-types/ActionTypes"
 
-const initialState = {}
+const initialState = []
 
 const marketData = (state=initialState, action) => {
     switch(action.type){

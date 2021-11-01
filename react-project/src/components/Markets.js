@@ -1,24 +1,21 @@
-import React, {useEffect} from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { dispatchInfo } from '../redux/actions/MarketActions';
+import React from 'react';
+import {useSelector} from 'react-redux';
+import Coin from './Coin';
+import "../Styling/Markets.css"
 
 export default function Markets() {
-    const dispatch = useDispatch();
-    const markets = useSelector((state) => state.marketData)
-
-    useEffect(() => {
-        const fetchCoins = async () => {
-            const getCoins = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false");
-            const coins = await getCoins.json();
-            dispatchInfo(dispatch, coins)
-        }
-        fetchCoins()
-        return () =>{}
-    }, []);
+    const markets = useSelector((state) => state.marketData);
 
     return (
-        <div>
-            
+        <div className="marketsPage">
+            <div className="infoArea">
+                <h1>Welcome to Digital Crypt</h1>
+                <h4>Browse the markets below and click the name to see more info about that crypto!</h4>
+            </div>
+            <div className="coinCont">
+                {markets?.data?.map((coin) => <Coin key={coin.id}coin={coin}/>)}
+            </div>
+
         </div>
     )
 }

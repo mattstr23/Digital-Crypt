@@ -1,0 +1,77 @@
+.detailCont {
+	margin: 15px;
+	background-color: #0c2d48;
+	display: flex;
+	flex-direction: column;
+	font-family: "Montserrat", sans-serif;
+	animation: slowLoad 3s;
+}
+.mainInfo {
+	display: flex;
+	padding: 10px;
+	justify-content: space-evenly;
+}
+.nameCont {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	text-align: center;
+}
+.nameCont h2 {
+	font-size: 1.3rem;
+}
+.nameCont h3 {
+	font-size: 1rem;
+}
+.nameCont h4 {
+	font-size: 0.7rem;
+}
+.coinImg {
+	height: 140px;
+	width: 140px;
+}
+.marketTitle {
+	text-decoration: underline;
+	color: #b1d4e0;
+	margin-top: 10px;
+}
+.marketInfo {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border: 2px solid #145da0;
+	margin: 10px;
+	background-color: #2e8bc0;
+}
+.infoCont {
+	margin-top: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.infoCont p {
+	color: #0c2d48;
+	margin: 7.5px;
+}
+.descrip {
+	font-size: 12px;
+	color: #2e8bc0;
+	text-align: center;
+	padding: 10px;
+}
+@media screen and (max-width: 550px) {
+	.descrip {
+		display: none;
+	}
+}
+@keyframes slowLoad {
+	from {
+		opacity: 0;
+		transform: rotateX(0deg);
+	}
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+	}
+}

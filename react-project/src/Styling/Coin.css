@@ -1,0 +1,143 @@
+.coinTick {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	border-bottom: 2px solid #2e8bc0;
+	text-align: right;
+	padding: 10px 0;
+	background-color: #0c2d48;
+	border-top: 2px solid #2e8bc0;
+	border-radius: 5px;
+	font-family: "Montserrat", sans-serif;
+}
+.coinLogo {
+	height: 30px;
+	width: 30px;
+	margin: 0 10px;
+}
+.coinName {
+	color: white;
+	text-align: left;
+	font-size: 14px;
+	width: 50px;
+	margin: 0 25px;
+}
+.coinName a {
+	color: inherit;
+	text-decoration: inherit;
+}
+.coinPrice {
+	color: #b1d4e0;
+	font-size: 14px;
+	width: 80px;
+	margin: 0 10px 0 25px;
+}
+.coinSym {
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	width: 60px;
+	margin-left: 25px;
+}
+.coinChange {
+	font-size: 14px;
+	width: 75px;
+	margin: 0 15px;
+}
+.coinPer {
+	font-size: 14px;
+	margin: 0 15px;
+}
+.red {
+	color: #f00606;
+}
+
+.green {
+	color: #11d811;
+}
+.addBut {
+	width: 50px;
+	height: 25px;
+	margin-right: 10px;
+	font-family: "Exo", sans-serif;
+	color: #0c2d48;
+	background-color: #2e8bc0;
+	border: none;
+	position: relative;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.addBut:hover {
+	background-color: #0c2d48;
+	color: white;
+	transition: ease all 0.5s;
+}
+.addBut:before,
+.addBut:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #2e8bc0;
+	transition: 0.5s ease all;
+}
+.addBut:after {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+.addBut:hover:before,
+.addBut:hover:after {
+	width: 100%;
+	transition: 1s ease all;
+}
+.addBut:focus {
+	background-color: white;
+	color: #b1d4e0;
+}
+@media screen and (max-width: 600px) {
+	.coinPer {
+		display: none;
+	}
+	.coinImg {
+		margin-right: 0;
+	}
+	.coinName {
+		margin: 0 5px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.coinSym {
+		display: none;
+	}
+	.coinPrice {
+		margin-left: 5px;
+	}
+	.coinChange {
+		margin: 0 5px;
+	}
+}
+@media screen and (max-width: 375px) {
+	.coinTick {
+		flex-wrap: wrap;
+	}
+	.coinChange {
+		margin-right: 10px;
+	}
+	.addBut {
+		margin-left: 150px;
+		margin-top: 15px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.coinChange {
+		margin: 15px 0px 5px 15px;
+	}
+	.addBut {
+		margin: 15px 10px 5px 0;
+	}
+}
