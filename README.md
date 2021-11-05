@@ -12,7 +12,9 @@ React front-end based, mobile responsive application implementing CoinGecko API 
 * Portfolio Page with Navbar
 * Individual crypto detail page with Navbar
 ## Rundown
-### Starting/Landing
+### Starting
+Once inside of the react-project file, run npm start to begin the application.
+### Landing
 Once inside of the react-project file, run npm start to begin the application.
 First page is a landing page with site logo, name and a continuance 'Begin Trading' button to the markets page.
 ![Screen Shot 2021-11-04 at 12 57 37 PM](https://user-images.githubusercontent.com/88062670/140393801-d6d95e3a-476e-4e32-9ac8-5ccc557ed678.png)
