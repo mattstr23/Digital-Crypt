@@ -28,5 +28,5 @@ The portfolio page displays any cryptos that have been added to to your portfoli
 Each cyrptos name is a link to a new page that displays more info on the stock. This page uses a local state to store a new API fetch data for the individual stock.
 ![Screen Shot 2021-11-05 at 12 20 30 AM](https://user-images.githubusercontent.com/88062670/140462209-70266653-b924-46be-8e41-d7687ad9f3ca.png)
 ## Closing
-### Medium Article - 
+### Portfolio - https://www.matthewvalicoff.com
 ### LinkedIn - https://www.linkedin.com/in/matthew-valicoff/
